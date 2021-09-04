@@ -1,6 +1,7 @@
 package com.deiabb.todolist.ui
 
 import android.app.Activity
+import android.location.GnssAntennaInfo
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -75,6 +76,8 @@ class AddTaskActivity : AppCompatActivity() {
             finish()
            // Log.e("TAG", "insertListeners" + TaskDataSource.getList())
         }
+
+
     }
     companion object {
         const val TASK_ID = "task_id"

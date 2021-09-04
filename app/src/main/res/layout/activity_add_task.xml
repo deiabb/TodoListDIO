@@ -104,6 +104,21 @@
         app:backgroundTint="@color/lightPeach"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_salvar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintBottom_toTopOf="@+id/btn_create_task"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:text="@string/label_btn_salve"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/lightSalmon"
+        android:visibility="gone"/>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_create_task"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

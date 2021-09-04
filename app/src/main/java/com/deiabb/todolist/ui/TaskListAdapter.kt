@@ -13,8 +13,9 @@ import com.deiabb.todolist.model.Task
 
 class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCallback()) {
 
-    var listenerEdit : (Task) -> Unit = {}
+    var listenerCreate : (Task) -> Unit = {}
     var listenerDelete : (Task) -> Unit = {}
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -42,7 +43,7 @@ class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCa
             popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
             popupMenu.setOnMenuItemClickListener {
                 when(it.itemId) {
-                    R.id.action_edit -> listenerEdit(item)
+                    R.id.action_edit -> listenerCreate(item)
                     R.id.action_delete -> listenerDelete(item)
                 }
                 return@setOnMenuItemClickListener true
